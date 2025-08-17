@@ -1,0 +1,327 @@
+/* 进出校通行证样式 */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+    font-weight: 400;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 2.88rem;
+}
+
+.info {
+    margin: -1.2rem .32rem .32rem;
+    border-radius: 0.2rem;
+    height: 10.6rem;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 16px 0px rgba(51, 51, 51, 0.16);
+}
+
+.info .topInfo {
+    height: 1.3rem;
+    margin: 0 0 0 0.56rem;
+    padding: 0.32rem 0 0 0;
+    display: flex;
+}
+
+.topInfo .left div {
+    display: inline-block;
+}
+
+.topInfo .left div img {
+    width: 1.28rem;
+    height: 1.28rem;
+    border-radius: 50%;
+}
+
+.topInfo .right {
+    margin-left: 0.18rem;
+    margin-top: -0.5rem;
+}
+
+.topInfo .right .info-name span:first-child {
+    font-size: 0.32rem;
+    color: #333333;
+    font-weight: bold;
+}
+
+.topInfo .right .info-name span:nth-child(2) {
+    font-size: 0.28rem;
+    color: #666666;
+    margin-left: 0.16rem;
+}
+
+.topInfo .right .info-depart {
+    color: #666666;
+    max-width: 4.6rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-radius: 0.1rem;
+    font-size: 0.28rem;
+}
+
+.topInfo .right .info-depart span {
+    vertical-align: top;
+}
+
+.info .nav ul {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.36rem;
+    line-height: 0.8rem;
+    border-bottom: 0.02rem solid #EEEEEE;
+    padding-bottom: 0.05rem;
+    padding-top: 0.34rem;
+    color: #333333;
+}
+
+.info .nav ul li.active {
+    color: #187EFF;
+    position: relative;
+}
+
+.info .nav ul li.active::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.8rem;
+    height: 0.08rem;
+    position: absolute;
+    content: "";
+    display: block;
+    background: #187EFF;
+    border-radius: 0.2rem 0.2rem 0 0;
+}
+
+.info .time {
+    font-size: 0.36rem;
+    color: #50B75E;
+    text-align: center;
+    margin: 0.32rem 0;
+}
+
+.info .time span {
+    font-size: 0.48rem;
+}
+
+.info .codeImg {
+    width: 4.28rem;
+    height: 4.28rem;
+    margin: 0 auto;
+}
+
+.info .codeImg img {
+    width: 100%;
+    height: 4.12rem;
+    margin: 0 auto;
+}
+
+.info .explain {
+    font-size: 0.32rem;
+    text-align: center;
+    margin-top: 0.24rem;
+    border-bottom: 0.02rem solid #EEEEEE;
+    padding-bottom: 0.32rem;
+}
+
+.info .bottomTitle {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.36rem;
+    color: #666666;
+    text-align: center;
+    padding-top: 0.24rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.partnerList {
+    padding: .7rem .48rem 0;
+    overflow: hidden;
+}
+
+.partnerList .tit {
+    height: .42rem;
+    line-height: .42rem;
+    text-align: center;
+    position: relative;
+}
+
+.partnerList .tit::before {
+    width: 200%;
+    height: 1px;
+    content: "";
+    background-color: #ececec;
+    -webkit-transform: scale(.5, .5);
+    -moz-transform: scale(.5, .5);
+    -ms-transform: scale(.5, .5);
+    -o-transform: scale(.5, .5);
+    transform: scale(.5, .5);
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    z-index: 0;
+}
+
+.partnerList .tit span {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 .2rem;
+    font-size: .28rem;
+    color: #666;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.partnerList .listBox {
+    text-align: center;
+    overflow: hidden;
+}
+
+.partnerList .list {
+    display: inline-block;
+    vertical-align: top;
+    height: .76rem;
+    width: auto;
+    margin-right: .54rem;
+    margin-bottom: .32rem;
+}
+
+.partnerList .list:last-of-type {
+    margin-right: 0;
+}
+
+.partnerList .list img {
+    width: auto;
+    height: 100%;
+}
+
+/* Mescroll 样式 */
+html, body {
+    height: 100%;
+}
+
+body {
+    -webkit-overflow-scrolling: touch;
+}
+
+.mescroll {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.mescroll-downwarp {
+    position: relative;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.mescroll-downwarp .downwarp-content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 30px;
+    padding: 10px 0;
+}
+
+.mescroll-downwarp .downwarp-tip {
+    display: inline-block;
+    font-size: 12px;
+    color: gray;
+    vertical-align: middle;
+}
+
+.mescroll-downwarp .downwarp-tip {
+    margin-left: 8px;
+}
+
+.mescroll-downwarp .downwarp-progress {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    border-bottom-color: transparent;
+    vertical-align: middle;
+}
+
+@-webkit-keyframes mescrollRotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes mescrollRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes mescrollFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes mescrollFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes mescrollFadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes mescrollFadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.mescroll-bar::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.mescroll-bar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.mescroll-bar::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: #ccc;
+}
+
+.mescroll-bar::-webkit-scrollbar-thumb:hover {
+    background-color: #aaa;
+}
