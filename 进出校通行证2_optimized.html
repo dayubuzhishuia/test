@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>进出校通行证</title>
+    <!-- 引入外部CSS文件 -->
+    <link rel="stylesheet" href="pass_style.css">
+    <link rel="stylesheet" href="pass_style2.css">
+</head>
+<body>
+    <header></header>
+    <div class="info">
+        <div class="topInfo">
+            <div class="left">
+                <div><img src="头像.png" alt="用户头像"></div>
+            </div>
+            <div class="right">
+                <div class="info-name"><span>姓名</span><span>学号</span></div>
+                <div class="info-depart"><span>学院/专业/班级</span></div>
+            </div>
+        </div>
+        <ul class="detail">
+            <li class="serviceDetail">
+                <span class="detailTitle serviceTitle">服务类型</span>
+                <span class="detailInfo">进出校</span>
+            </li>
+            <li class="passDetail">
+                <span class="detailTitle passTitle">通行证类型</span>
+                <span class="detailInfo">临时</span>
+            </li>
+            <li class="numberDetail">
+                <span class="detailTitle numberTitle">通行证编号</span>
+                <span class="detailInfo">2023000001</span>
+            </li>
+            <li class="clockDetail">
+                <span class="detailTitle clockTitle">有效时间</span>
+                <span class="detailInfo">2023-10-01 至 2023-10-31</span>
+            </li>
+        </ul>
+        <div class="startEndTime">
+            <span class="start">开始时间</span>
+            <span class="end">结束时间</span>
+        </div>
+        <div class="progress">
+            <h3>行程进度</h3>
+            <div class="progressDetail">
+                <ul>
+                    <li>
+                        <div class="name"><i style="background-color: #49C91D;"></i>出发地</div>
+                        <div class="time">08:00</div>
+                    </li>
+                    <li>
+                        <div class="name"><i style="background-color: #699EF5;"></i>校门</div>
+                        <div class="time">08:30</div>
+                    </li>
+                    <li>
+                        <div class="name"><i style="background-color: #FF9500;"></i>目的地</div>
+                        <div class="time">09:00</div>
+                    </li>
+                    <li>
+                        <div class="name"><i style="background-color: #D9261B;"></i>返回</div>
+                        <div class="time">16:00</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sureLeave">
+            <span class="leave">确认离开</span>
+            <span class="return">确认返回</span>
+        </div>
+    </div>
+    <div class="partnerList">
+        <div class="tit"><span>合作单位</span></div>
+        <div class="listBox">
+            <div class="list"><img src="学校logo.png" alt="学校logo"></div>
+            <div class="list"><img src="学习通.png" alt="学习通"></div>
+        </div>
+    </div>
+    <div class="popup leaveSchool">
+        <!-- 弹窗内容 -->
+    </div>
+
+    <!-- JavaScript代码 -->
+    <script>
+        // 可以添加一些动态功能，如时间显示、弹窗交互等
+        document.addEventListener('DOMContentLoaded', function() {
+            // 设置当前时间
+            function updateTime() {
+                const now = new Date();
+                const timeElement = document.createElement('div');
+                timeElement.style.textAlign = 'center';
+                timeElement.style.margin = '10px 0';
+                timeElement.style.fontSize = '0.28rem';
+                timeElement.textContent = `当前时间: ${now.toLocaleString()}`;
+                document.querySelector('.info').prepend(timeElement);
+            }
+            updateTime();
+            setInterval(updateTime, 60000); // 每分钟更新一次
+        });
+    </script>
+</body>
+</html>
